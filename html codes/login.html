@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page </title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+<video autoplay muted loop id="bg-video">
+    <source src="bgvideo.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<div class="login-box">
+    <h2>Welcome to our webpage</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+
+    <div class="error" id="errorMsg"></div>
+
+    <div class="footer">©Enjoy our webpage</div>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorMsg = document.getElementById("errorMsg");
+
+        if (username !== "" && password !== "") {
+    window.location.href = "exp1.html";
+} else {
+    errorMsg.textContent = "Please enter username and password!";
+}
+
+    }
+</script>
+
+</body>
+</html>
